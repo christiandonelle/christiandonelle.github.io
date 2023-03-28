@@ -2,29 +2,44 @@
 <html>
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="main.css"><body>  
-                <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Playfair+Display">
-              <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
-                <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
-                <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
-                <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
-              <nav class="navbar navbar-expand-md bg navbar-dark fixed-top">
-                    <a class="navbar-brand" href="#">dons</a>
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
-                      <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="collapse navbar-collapse" id="collapsibleNavbar">
-                      <ul class="navbar-nav">
+        <link rel="stylesheet" href="main.css">
+        <body id="dons">
+            <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Playfair+Display">
+            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+            <link href="https://fonts.googleapis.com/css?family=Nunito:400,700&display=swap" rel="stylesheet">
+            <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+            <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+            <nav class="navbar navbar-expand-md bg navbar-dark fixed-top">
+                <a class="navbar-brand dons-text" href="#">dons</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                    <ul class="navbar-nav">
                         <li class="nav-item">
-                          <a class="nav-link" href="#about">About</a>
+                            <a class="nav-link" href="#about">About</a>
                         </li>
                         <li class="nav-item">
-                          <a class="nav-link" href="#fin">Links</a>
+                            <a class="nav-link" href="#fin">Links</a>
                         </li>
-                        
-                      </ul>
-                    </div>  
-                </nav>
+                    </ul>
+                </div>
+            </nav>
+            <script>
+                $(document).ready(function() {
+                    $('a[href^="#"], .dons-text').on('click', function(event) {
+                        event.preventDefault();
+                        var target = this.hash || '#dons';
+                        var $target = $(target);
+                        var navbarHeight = $('.navbar').outerHeight();
+                        $('html, body').animate({
+                            'scrollTop': $target.offset().top - navbarHeight
+                        }, 1000, 'swing');
+                    });
+                });
+            </script>
+              
                 <section class="home-section">
                     <img src="https://images.unsplash.com/photo-1504275107627-0c2ba7a43dba?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80"/>
                     <p>Christian Donelle Rosario</p>
@@ -40,11 +55,10 @@
                 <section class="section-tables">
                     <div class="table-content" >        
                             
-                        <div class="desc">
-                           
-                            <a href="https://www.facebook.com/photo/?fbid=1923718774326120&set=a.148260291871986">
-                              <img src="https://i.imgur.com/UY6VnNd.jpeg"/>  
-                            </a>
+                      <div class="desc">
+                        <a href="https://www.facebook.com/photo/?fbid=1923718774326120&set=a.148260291871986" class="circle-image-link">
+                          <img src="https://i.imgur.com/UY6VnNd.jpeg" class="circle-image"/>
+                        </a>
                             
                            <p style="color: white"> Fun and outgoing  </p>
                         
@@ -56,7 +70,7 @@
                         <div class="desc">
                             
                             <a href="https://www.facebook.com/photo/?fbid=2538115109553147&set=a.148260291871986">
-                              <img src="https://i.imgur.com/O28080W.jpg"/>      
+                              <img src="https://i.imgur.com/O28080W.jpg" class="circle-image"/>      
                             </a>
                             
                             <p style="color: white"> Assertive and risk-taker </p>
@@ -69,7 +83,7 @@
                         <div class="desc">
                             
                             <a href="https://www.facebook.com/photo/?fbid=2808121092552546&set=a.148260291871986">
-                              <img src="https://i.imgur.com/BN9EKp2.jpg"/> 
+                              <img src="https://i.imgur.com/BN9EKp2.jpg" class="circle-image"/> 
                             </a>
                            
                             <p style="color: white"> Laid-back but reliable </p>
@@ -82,7 +96,7 @@
                         <div class="desc">
                             
                             <a href="https://www.facebook.com/photo/?fbid=1526533020711366&set=a.148260291871986">
-                              <img src="https://i.imgur.com/t2mUcsi.jpg"/>
+                              <img src="https://i.imgur.com/t2mUcsi.jpg" class="circle-image"/>
                             </a>
                             
                             <p style="color: white"> Young and gullible </p>
@@ -125,6 +139,9 @@
                     </div>
                   <img src="https://img.icons8.com/bubbles/512/abra.png" alt="save"/>
                 </div>
+
+                
+
               </section>
                 <footer>
 
@@ -143,7 +160,8 @@
                 </footer> 
                <script src="https://kit.fontawesome.com/66227f2fb9.js" crossorigin="anonymous"></script>
               <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/gsap.min.js"></script>
-                <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/ScrollTrigger.min.js"></script>          
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/ScrollTrigger.min.js"></script>       
+                   
             </body>
             
 <div class="context">
