@@ -143,12 +143,11 @@ body{
       text-align: center;
       scroll-snap-type: y mandatory;
       overflow-y: scroll;
-      scroll-behavior: smooth; 
-      font-family: 'Playfair Display';    
+      scroll-behavior: smooth;   
   }
   /* override bootatrap classes */
   .navbar{
-      font-family: 'Playfair Display';
+
   /*     box-shadow: 4px 4px 4px var(--main_color); */
   }
   .nav-link{
@@ -199,8 +198,7 @@ body{
       color:white;
   }
   .home-section div>p{
-      margin:0;
-      font-family: 'Playfair Display';       
+      margin:0;    
   }
   .home-section div>i{
       position: absolute;
@@ -248,7 +246,6 @@ body{
     border: 1px solid red;
     font-size:3vw;
     font-weight:700;
-    font-family: 'Playfair Display'; 
     color: rgb(255, 255, 255);
   }
   .section-tables{
@@ -283,19 +280,20 @@ body{
       height: auto;       
       text-align: center;   
       box-sizing: border-box;
-      font-weight: 700;    
+      font-weight: 700;
+      padding-left: 10%;
   }
   
   .desc p{
      height: 50%;
      margin:auto;
      width:90%;
-     font-size:1.5 vw;
-     font-family: 'Playfair Display';    
+     font-size:1.5 vw;   
      display: -webkit-box;
       overflow: hidden;
       -webkit-box-orient: vertical; 
       -webkit-line-clamp: 3; 
+      padding-right: 9%;
   }
   
   .desc button{   
@@ -306,7 +304,6 @@ body{
       border: 3px solid var(--main_color);
       font-size: 1rem;
       font-weight: bold;
-      font-family: 'Playfair Display';
       cursor: pointer;
   }
   .why-div{
@@ -314,8 +311,7 @@ body{
     margin:auto 15%;  
     display:flex;
     justify-content:space-between;
-    box-sizing:border-box;
-    font-family: 'Playfair Display';   
+    box-sizing:border-box;     
   }
   .why-div div{
     width:45%;
@@ -412,10 +408,17 @@ body{
       color:value(--color);
     }
       .desc{        
-          padding: 5%;
+        display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    
+          
       }  
       .desc p{
-          font-size: 3vw;
+          font-size: 5vw;
+          padding-right: 10%;
       }
       .desc button{       
           width:30%;
@@ -462,8 +465,29 @@ body{
     background: #333;
     background-attachment: fixed;
     background-size: cover;
+    font-family: 'Nunito', sans-serif;
+  }
+  h1, h2, h3, h4, h5, h6, p {
+    font-family: 'Nunito', sans-serif;
+  }
+  .circle-image-link {
+    display: inline-block;
+    border-radius: 50%;
+    overflow: hidden;
   }
   
+  .circle-image {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+  }
+  .dons-text {
+    border-radius: 10px;
+    padding: 5px 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+ 
   #video-background {
     position: fixed;
     right: 0; 
@@ -476,3 +500,5 @@ body{
   }
   
   
+
+ 
