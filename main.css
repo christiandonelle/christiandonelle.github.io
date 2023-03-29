@@ -243,7 +243,7 @@ body{
     box-sizing:border-box;
     background-color: rgb(61, 60, 146);
     text-align: center;
-    border: 1px solid red;
+    
     font-size:3vw;
     font-weight:700;
     color: rgb(255, 255, 255);
@@ -331,10 +331,9 @@ body{
   }
   footer{
       width: 100%;
-      background-color: var(--main_color);
       color: white;
-      height:auto;
-      padding: 10px;
+      height: auto;
+      padding-top: 50px;
       box-sizing: border-box;   
       text-align: center;
   }
@@ -443,9 +442,10 @@ body{
   .why-div p:nth-child(2){
      font-size:2.5vw;
   }
-    footer{
+    .footer{
     
-      position: static; 
+      
+      margin-top: 30px;
       /* top:100%; */
     }
   }
@@ -501,4 +501,13 @@ body{
   
   
 
+ 
+             .carousel-inner{
+              border-radius: 50px;
+          }
+           .carousel-item-next.carousel-item-left img,
+           .carousel-item-prev.carousel-item-right img {
+              border-radius: 50px;
+            }        
+            
  
